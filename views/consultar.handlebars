@@ -1,13 +1,26 @@
 <main>
-    <div class="row">
+  <div class="container-edit">
+      <div class="row">
         <div class="col-6 offset-3">
-            <h1>Cadastrar Informações</h1>
-            <form action="/consultar" method="post" enctype="multipart/form-data">
-                <img src="/images/user.jpg" />
-                <h1>Página do professor Evandro Diniz</h1>
-                <p>Professor EBTT nas disciplinas de informática.</p>
-                <p>Instituto Federal do Maranhão.</p>
+            <form action="/pesquisa" method="get" class="form-control">
+              <input type="text" name="nome" value="{{termo}}" placeholder="Digite o nome do produto..." class="form-control" required/>
+              <button type="submit" class="btn btn-success mt-2 form-control">Pesquisar</button>
             </form>
-        </div>
-    </div>
+
+            <section id="resultados" class="mt-4">
+              {{#if produtos.length}}
+                <ul>
+                  {{#each produtos}}
+                    <li>
+                      <strong>{{nome}}</strong> - Idade {{valor}}
+                    </li>
+                  {{/each}}
+                </ul>
+              {{else}}
+                <p>Nenhum personagem encontrado.</p>
+              {{/if}}
+            </section>
+          </div>
+      </div>
+  </div>
 </main>

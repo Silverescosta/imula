@@ -1,12 +1,70 @@
 <main>
-    <div class="row">
-        <div class="col-6 offset-3">
-            <h1>Cadastrar Informações</h1>
-            <form action="/cadastrar" method="post" enctype="multipart/form-data">
-                <img src="/images/user.jpg" />
-                <h1>Página do professor Evandro Diniz</h1>
-                <p>Professor EBTT nas disciplinas de informática.</p>
-                <p>Instituto Federal do Maranhão.</p>
+    <div class="container">
+        <div class="form-image">
+            <img src="/images/undraw_house-searching_g2b8.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h8>Cadastre-se</h8>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="imoname">Nome do imóvel</label>
+                        <input id="imoname" type="text" name="imoname" placeholder="Nome do imóvel" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="carac">Características </label>
+                        <input id="carac" type="text" name="carac" placeholder="Características do imóvel" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="valor">Valor</label>
+                        <input id="valor" type="text" name="valor" placeholder="Digite o valor do imóvel" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cep">CEP</label>
+                        <input id="cep" type="text" name="cep" placeholder="_ _ _ _ _-_ _ _" required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Seleciones fotos do imóvel</label>
+                        <input type="file" name="imagens" id="imagens" class="form-control" multiple required>
+                    </div>
+
+                </div>
+
+                <div class="modalidade-inputs">
+                    <div class="modalidade-title">
+                        <h6>Modalidade</h6>
+                    </div>
+
+                    <div class="modalidade-group">
+                        <div class="modalidade-input">
+                            <input id="alugar" type="radio" name="modalidade">
+                            <label for="alugar">Alugar</label>
+                        </div>
+
+                        <div class="modalidade-input">
+                            <input id="comprar" type="radio" name="modalidade">
+                            <label for="comprar">Comprar</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button><a href="#">Cadastrar</a> </button>
+                </div>
             </form>
         </div>
     </div>

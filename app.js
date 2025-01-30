@@ -33,11 +33,14 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cadastrar", (req, res) => {
-  res.render("cadastrar", { title: "Cadastrar"});
+  res.render("cadastrar", { cabecalho: "Página Inicial" });
 });
 
-app.get("/consultar", (req, res) => {
-  res.render("consultar", { title: "Consultar"});
+app.get("/cadastrar", (req, res) => {
+  res.render("cadastar", {
+    title: "Cadastrar",
+    cabecalho: "Cadastrar Informações",
+  });
 });
 
 /*app.post("/cadastrar", (req, res) => {

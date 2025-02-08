@@ -93,6 +93,8 @@ app.get("/cadastrar", (req, res) => {
       imoveis: rows,
     });
 
+    //sjcnc
+
     // Log para verificar os dados
     rows.forEach((row) => {
       console.log(`ID: ${row.id}, nome ${row.nome}, carac ${row.carac},  valor ${row.valor},  number ${row.number},  cep ${row.cep}, modalidade ${row.modalidade} imagens ${row.imagens}`);

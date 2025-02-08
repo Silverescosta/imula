@@ -37,17 +37,16 @@
 
 .card {
     justify-content: center;
-    gap: 10px;
-    padding: 5px;
-    width: 190px;
-    height: 200px;
+    gap: -30px;
+    padding: 4px;
+    width: 180px;
+    height: 180px;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-}
+    text-align: center;}
 
 .card a {
-    margin-top: 5px;
+    margin-top: 30px;
 }
 
 #article-index {
@@ -60,6 +59,7 @@
     z-index: 1000; /* Garante que fique acima de outros elementos */
     padding: 10px 0; /* Ajuste conforme necessário */
     text-align: center;
+     
 }
 
 .row {
@@ -287,11 +287,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    max-height: 200%;
+    gap: 50px;
+    max-height: flex;
     overflow-y: auto;
     background: #618ce4d7;
-    padding: 6rem;
+    padding: 10rem;
     width: 60%; /* Ajuste conforme necessário */
 
 }

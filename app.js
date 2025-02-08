@@ -93,6 +93,8 @@ app.get("/cadastrar", (req, res) => {
       imoveis: rows,
     });
 
+    //sjcnc
+
     // Log para verificar os dados
     rows.forEach((row) => {
       console.log(`ID: ${row.id}, nome ${row.nome}, carac ${row.carac},  valor ${row.valor},  number ${row.number},  cep ${row.cep}, modalidade ${row.modalidade} imagens ${row.imagens}`);
@@ -147,13 +149,13 @@ app.post("/atualizar", (req, res) => {
   let number = req.body.number;
   let cep = req.body.cep;
   let modalidade = req.body.modalidade;
-  let sql = `UPDATE imoveis SET nome = ?, carac = ?, valor = ?, number = ?, cep = ?, modalidade = ?, imagens = ? WHERE id = ?`;
+  let sql = `UPDATE imoveis SET nome = ?, carac = ?, valor = ?, number = ?, cep = ?, modalidade = ? WHERE id = ?`;
 
   // Se uma nova imagem for enviada
   if (req.files && req.files.imagens) {
     let imagens = req.files.imagens.name;
 
-    conexao.run(sql, [nome , carac ,  valor ,  number ,  cep ,  modalidade, imagens, id], function (erro) {
+    conexao.run(sql, [nome, carac, valor, number, cep, modalidade, id], function (erro) {
       if (erro) {
         console.error("Erro ao atualizar o banco de dados:", erro.message);
         return res.status(500).send("Erro ao atualizar o produto.");
@@ -167,14 +169,14 @@ app.post("/atualizar", (req, res) => {
             console.error("Erro ao mover o arquivo:", err.message);
             return res.status(500).send("Erro ao salvar a nova imagem.");
           }
-          console.log("Imoveo atualizado com sucesso:", id);
+          console.log("Imóvel atualizado com sucesso:", id);
           res.redirect("/");
         }
       );
     });
   } else {
     // Atualiza o banco de dados sem alterar a imagem
-    conexao.run(sql, [nome , carac ,  valor ,  number ,  cep ,  modalidade , id], function (erro) {
+    conexao.run(sql, [nome, carac, valor, number, cep, modalidade, id], function (erro) {
       if (erro) {
         console.error("Erro ao atualizar o banco de dados:", erro.message);
         return res.status(500).send("Erro ao atualizar o produto.");

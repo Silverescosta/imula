@@ -1,0 +1,120 @@
+<main class="io">
+    <div class="container-ge">
+    <div id="article-index">
+        <div class="news">
+           <h1>Corretora de Imovéis</h1>
+            <p>Sistema Administrativo de Imovéis</p>
+        </div>
+    </div>
+    <div class="ola">
+        <div class="row">
+            {{#each imoveis}}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <td><img src="/images/uploads/{{imagens}}" class="ima"></td>
+                        <div class="textos">
+                            <tr>
+                                
+                                    <span class="ca">
+                                        Nome do imóvel
+                                    </span>
+                                <p>
+                                <td>{{nome}}</td>
+                                </p>
+
+                                    <span class="ca">
+                                        Características do imóvel
+                                    </span>
+                                <p>
+                                <td>{{carac}}</td>
+                                </p>
+
+                                    <span class="ca">
+                                        Valor
+                                    </span>
+                                <p>
+                                <td>R${{valor}}</td>
+                                </p>
+
+                                    <span class="ca">
+                                        Munero para contato
+                                    </span>
+                                <p>
+                                <td>{{number}}</td>
+                                </p>
+
+                                
+                                    <span class="ca">
+                                        CEP do imóvel
+                                    </span>
+                                <p>
+                                <td>{{cep}}</td>
+                                </p>
+
+                                 
+                                    <span class="ca">
+                                        Modalidade
+                                    </span>
+                                <p>
+                                <td>{{modalidade}}</td>
+                                </p>
+                            </tr>                                           
+                        </div>
+                        <div class="continue-button">
+                        <a href="/editar/{{id}}"><button type="submit">atualizar</button></a>
+                        <div class="continue-button-red">
+                        <a href="/remover/{{id}}/{{imagens}}" onclick="return confirm('Tem certeza que deseja remover este produto?');"><button type="submit">Remover</button></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+
+<style>
+    .continue-button-red button {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    background-color: #ee4c4c;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.continue-button-red button:hover {
+    background-color: #ee4c4c;
+}
+
+
+.continue-button-red button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.container-ge {
+    display: 100px;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(50, 165, 165);
+    height: 500vh; /* Ajuste conforme necessário */
+}
+
+
+.news {
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+</style>

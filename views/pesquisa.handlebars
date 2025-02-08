@@ -1,0 +1,27 @@
+<main class="oiii">
+  <div class="palnel-pesquisa">
+      <div class="row">
+        <div class="col-6 offset-3">
+            <form action="/pesquisa" method="get" class="form-control"> 
+              <input type="text" name="nome" value="{{termo}}" placeholder="Digite o nome do produto..." class="form-control" required/>
+              <div class="continue-button">
+              <button type="submit" class="btn btn-success mt-2 form-control">Pesquisar</button>
+            </form>
+
+            <section id="resultados" class="mt-4">
+              {{#if produtos.length}}
+                <ul>
+                  {{#each produtos}}
+                    <li>
+                      <strong>{{nome}}</strong> - valor R${{valor}}
+                    </li>
+                  {{/each}}
+                </ul>
+              {{else}}
+                <p>Nenhum imoveo encontrado.</p>
+              {{/if}}
+            </section>
+          </div>
+      </div>
+  </div>
+</main>

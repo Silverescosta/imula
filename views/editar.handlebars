@@ -1,0 +1,143 @@
+<main class="oiii">
+    <div class="container">
+        <div class="form-image">
+            <img src="/images/uploads/{{personagem.imagens}}" alt="">
+        </div>
+        <div class="form">
+            <form action="/atualizar" method="post" enctype="multipart/form-data">
+                <div class="form-header">
+                    <div class="title">
+                        <h8>atualizar</h8>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="hidden" name="id" class="form-control" value="{{personagem.id}}">
+                    <div class="input-box">
+                        <label for="nome">Nome do imóvel</label>
+                        <input id="" type="text" name="nome" placeholder="Nome do imóvel" value={{personagem.nome}} required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="carac">Características </label>
+                        <input id="" type="text" name="carac" placeholder="Características do imóvel" value={{personagem.carac}} required>
+                    </div>
+                    <div class="input-box">
+                        <label for="valor">Valor</label>
+                        <input id="" type="number" name="valor" placeholder="Digite o valor do imóvel" value={{personagem.valor}} required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="" type="text" name="number" placeholder="(xx) xxxx-xxxx" value={{personagem.number}} required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cep">CEP</label>
+                        <input id="" type="text" name="cep" placeholder="_ _ _ _ _-_ _ _"  value={{personagem.cep}} required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="imagens">Seleciones foto do imóvel</label>
+                        <input type="file" name="imagens" id="" class="form-control" value={{personagem.imagens}}>
+                    </div>
+
+                </div>
+
+                <div class="modalidade-inputs">
+                    <div class="input-box">
+                        <label for="modalidade"> Modalidade do imoveo</label>
+                        <input id="" type="text" name="modalidade" placeholder=" Alugar ou vender" value={{personagem.modalidade}} required>
+                </div>
+                </div>
+
+                <div class="continue-button-m">
+                    <!--
+                    <input type="submit" value="Editar" class="btn btn-success">
+                    <a href="/cadastrar" class="btn btn-danger form-control">Cancelar</a>
+
+ -->
+                    
+                     <div class="continue-button">
+                       <button  type="submit">Editar</button>
+                    <div class="continue-button-red">
+                        <a href="/cadastrar" onclick="return confirm('Você tem certeza que deseja cancelar?');"><button type="submit">cancelar</button></a>
+                    </div>
+                </div>
+            </form>
+
+            </div>
+    </div>
+
+            <style>
+    .continue-button-red button {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    background-color: #ee4c4c;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.continue-button-red button:hover {
+    background-color: #ee4c4c;
+}
+
+
+.continue-button-red button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.continue-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões, ajuste conforme necessário */
+}
+
+.continue-button-red button {
+    background-color: #ee4c4c;
+    color: white;
+    border: none;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button-red button:hover {
+    background-color: #d43f3f;
+}
+</style>
+        
+</main>
+<!-- <main>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <form action="/atualizar" method="post" enctype="multipart/form-data" class="form-control">
+                    <img src="/images/uploads/{{personagem.imagens}}" alt="">
+                    <input type="hidden" name="id" class="form-control" value="{{personagem.id}}">
+                    <input type="text" name="nome" class="form-control" value="{{personagem.nome}}">
+                    <input type="text" name="carac" class="form-control" value="{{personagem.carac}}">
+                    <input type="number" name="valor" class="form-control" value="{{personagem.valor}}">
+                    <input type="text" name="number" class="form-control" value="{{personagem.number}}">
+                    <input type="text" name="cep" class="form-control" value="{{personagem.cep}}">
+                    <input type="text" name="modalidade" class="form-control" value="{{personagem.modalidade}}">
+
+                    <input type="file" name="imagens" class="form-control">
+                    <input type="submit" value="Editar" class="btn btn-success">
+                    <a href="/cadastrar" class="btn btn-danger form-control">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+ -->
